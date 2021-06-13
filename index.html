@@ -16,17 +16,17 @@
             <div class="content has-text-centered is-medium">Play Rock/Paper/Scissors Against the Computer!</div>
 
             <p class="buttons is-centered">
-                <button class="button is-outlined is-primary has-text-black is-large" id="rock">
+                <button class="button play-button is-outlined is-primary has-text-black is-large" id="rock">
                 <span class="icon">
                     <i class="fas fa-hand-rock fa-2x"></i>
                 </span>
                 </button>
-                <button class="button is-outlined is-primary has-text-black is-large" id="paper">
+                <button class="button play-button is-outlined is-primary has-text-black is-large" id="paper">
                 <span class="icon">
                     <i class="fas fa-hand-paper fa-2x"></i>
                 </span>
                 </button>
-                <button class="button is-outlined is-primary has-text-black is-large" id="scissors">
+                <button class="button play-button is-outlined is-primary has-text-black is-large" id="scissors">
                 <span class="icon">
                     <i class="fas fa-hand-scissors fa-2x"></i>
                 </span>
@@ -34,12 +34,16 @@
             </p>
 
             <div class="is-large" id="choices"></div>
-                <div class="columns is-centered is-mobile">
-                    <div class="box column is-2 has-text-centered" id="player-choice">You</div>
-                    <div class="box column is-2 has-text-centered" id="computer-choice">Computer</div>
+                <div class="columns is-centered is-hidden" id="show">
+                    <div class="box column is-2 has-text-centered" id="player-choice">You: </div>
+                    <div class="box column is-2 has-text-centered" id="computer-choice">Comp: </div>
                 </div>
 
             <div class="content is-hidden block has-text-centered is-large" id="results"></div>
+
+            <div class="buttons is-centered"> 
+                <button class="button has-background-primary is-hidden" id="play-again">Play Again</button>
+            </div>
 
         </div>
     </div>
