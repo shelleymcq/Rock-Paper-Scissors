@@ -13,22 +13,34 @@ const choiceArr = ["rock", "paper", "scissors"]
 let playGame = function() {
     let computerChoice = choiceArr[Math.floor(Math.random()*choiceArr.length)];
     localStorage.setItem("computer", computerChoice)
+    renderChoices();
 }
-
 
 // render choices to screen
 
+let renderChoices = function() {
+    const player = $("#player-choice").text(localStorage.getItem("choice"))
+    const computer = $("#computer-choice").text(localStorage.getItem("computer"))
+    // logic for winning
+    if((localStorage.getItem("choice")) === (localStorage.getItem("computer"))) {
+        console.log("tie");
+    } else if ((localStorage.getItem("choice")) === (localStorage.getItem("computer"))) {
+        console.log("win");
+    }
+    
+}
 
 
-// logic for winning
 
 
 
 // render results to screen
+// remove class 'is-hidden'
+// add text "You Win!" or "Computer Wins!"
 
 
 
-// play again button
+// play again button/clear screen
 
 
 
