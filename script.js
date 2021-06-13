@@ -24,8 +24,14 @@ let renderChoices = function() {
     // logic for winning
     if((localStorage.getItem("choice")) === (localStorage.getItem("computer"))) {
         console.log("tie");
-    } else if ((localStorage.getItem("choice")) === (localStorage.getItem("computer"))) {
+    } else if (((localStorage.getItem("choice")) === "rock") && ((localStorage.getItem("computer")) === "scissors")) {
         console.log("win");
+    } else if (((localStorage.getItem("choice")) === "paper") && ((localStorage.getItem("computer")) === "rock")) {
+        console.log("win");
+    } else if (((localStorage.getItem("choice")) === "scissors") && ((localStorage.getItem("computer")) === "paper")) {
+        console.log("win");
+    } else {
+        console.log("lose");
     }
     
 }
