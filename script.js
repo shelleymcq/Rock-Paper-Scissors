@@ -23,28 +23,23 @@ let renderChoices = function() {
     const computer = $("#computer-choice").text(localStorage.getItem("computer"))
     // logic for winning
     if((localStorage.getItem("choice")) === (localStorage.getItem("computer"))) {
-        console.log("tie");
+        $("#results").removeClass("is-hidden");
+        $("#results").text("Tie!")
     } else if (((localStorage.getItem("choice")) === "rock") && ((localStorage.getItem("computer")) === "scissors")) {
-        console.log("win");
+        $("#results").removeClass("is-hidden");
+        $("#results").text("You Win!")
     } else if (((localStorage.getItem("choice")) === "paper") && ((localStorage.getItem("computer")) === "rock")) {
-        console.log("win");
+        $("#results").removeClass("is-hidden");
+        $("#results").text("You Win!")
     } else if (((localStorage.getItem("choice")) === "scissors") && ((localStorage.getItem("computer")) === "paper")) {
-        console.log("win");
+        $("#results").removeClass("is-hidden");
+        $("#results").text("You Win!")
     } else {
-        console.log("lose");
+        $("#results").removeClass("is-hidden");
+        $("#results").text("Computer Wins!")
     }
     
 }
-
-
-
-
-
-// render results to screen
-// remove class 'is-hidden'
-// add text "You Win!" or "Computer Wins!"
-
-
 
 // play again button/clear screen
 
