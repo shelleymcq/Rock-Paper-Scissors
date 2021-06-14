@@ -1,5 +1,4 @@
-// collect player's choice
-
+// collect player's choice on click and disable buttons
 $(".play-button").click(function() {
     let playerChoice = $(this).attr('id');
     localStorage.setItem("choice", playerChoice)
@@ -7,22 +6,20 @@ $(".play-button").click(function() {
     playGame();
 })
 
-// computer's choice
-
+// make computer's random choice
 const choiceArr = ["rock", "paper", "scissors"]
 
 let playGame = function() {
     let computerChoice = choiceArr[Math.floor(Math.random()*choiceArr.length)];
     localStorage.setItem("computer", computerChoice)
-    renderChoices();
+    renderChoice();
 }
 
-// render choices to screen
-
-let renderChoices = function() {
-    $("#player-choice").text(localStorage.getItem("choice"))
-    $("#computer-choice").text(localStorage.getItem("computer"))
+// render computer's choice to screen, determine winner, and display play again button
+let renderChoice = function() {
+    $("#computer-choice").text("Computer chose " + localStorage.getItem("computer"));
     $("#show").removeClass("is-hidden");
+
     // logic for winning
     if((localStorage.getItem("choice")) === (localStorage.getItem("computer"))) {
         $("#results").removeClass("is-hidden");
@@ -47,6 +44,11 @@ let renderChoices = function() {
     }
 }
 
+// refresh page on play again click
 $("#play-again").click(function() {
     location.reload();
 })
+
+// go further:
+// store and display scores for session
+// input initials and display history of scores

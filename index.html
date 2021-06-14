@@ -12,9 +12,10 @@
 
     <div class="container is-max-desktop">
         <div class="notification is-info">
-            
+        
             <div class="content has-text-centered is-medium">Play Rock/Paper/Scissors Against the Computer!</div>
 
+            <!-- player choices in buttons with font awesome icons -->
             <p class="buttons is-centered">
                 <button class="button play-button is-outlined is-primary has-text-black is-large" id="rock">
                 <span class="icon">
@@ -33,14 +34,16 @@
                 </button>
             </p>
 
-            <div class="is-large" id="choices"></div>
+            <!-- computer choice rendered -->
+            <div class="is-large"></div>
                 <div class="columns is-centered is-hidden" id="show">
-                    <div class="box column is-2 has-text-centered" id="player-choice">You: </div>
-                    <div class="box column is-2 has-text-centered" id="computer-choice">Comp: </div>
+                    <div class="box has-background-primary-dark has-text-primary-light has-text-centered" id="computer-choice"></div>
                 </div>
 
+            <!-- winnder announced -->
             <div class="content is-hidden block has-text-centered is-large" id="results"></div>
 
+            <!-- play again button -->
             <div class="buttons is-centered"> 
                 <button class="button has-background-primary is-hidden" id="play-again">Play Again</button>
             </div>
